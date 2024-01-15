@@ -1,0 +1,37 @@
+$mainBg: #20272a;
+$navBg: #1d2226;
+$inputBg: #3c6862;
+$btnBg: #184b43;
+
+.help-container {
+  padding: 20px;
+  background-color: $mainBg;
+  color: white;
+
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+
+    li {
+      font-size: 1.2em;
+      line-height: 1.5;
+      margin-bottom: 10px;
+
+      strong {
+        color: $btnBg;
+      }
+    }
+  }
+}
+

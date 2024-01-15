@@ -1,0 +1,61 @@
+$mainBg: #20272a;
+$navBg: #1d2226;
+$inputBg: #3c6862;
+$btnBg: #184b43;
+
+body {
+  font-family: Helvetica;
+  background-color: #94a3b8;
+}
+
+a {
+  margin: 10px;
+}
+
+main {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* SPINNER BEHAVIOUR */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-image {
+  animation: rotate 3s linear infinite;
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  border: none;
+  font-size: 1.2em;
+  padding: 10px;
+  border-radius: 20px;
+  width: 70px;
+  background: $btnBg;
+  color: white;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.trash-icon {
+  font-size: 1.2em;
+  line-height: 1.2;
+}

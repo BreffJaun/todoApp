@@ -1,0 +1,43 @@
+$mainBg: #20272a;
+$navBg: #1d2226;
+$inputBg: #3c6862;
+$btnBg: #184b43;
+
+.todos-container {
+  padding: 20px 10px;
+
+  .todo-form {
+    .input-item {
+      input {
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        background: $inputBg;
+        margin-right: 10px;
+        color: white;
+        font-size: 1.2em;
+        min-width: 300px;
+      }
+    }
+  }
+
+  .todos {
+    padding-top: 30px;
+
+    .todo-item {
+      padding: 5px 10px;
+      background: $inputBg;
+      margin: 10px 0;
+      border-radius: 50px;
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .todo-innerItem {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+* {
+  font-family: Helvetica, sans-serif;
+}
+
+nav {
+  background-color: #64748b;
+  /* Hintergrundfarbe der Navigation */
+  padding: 10px;
+  /* Abstand innerhalb der Navigation */
+}
+
+ul {
+  list-style-type: none;
+  /* Entfernt die Aufzählungspunkte */
+  margin: 0;
+  margin-left: 0.25rem;
+  padding: 0;
+  display: flex;
+  /* Stellt die Listenelemente nebeneinander dar */
+  justify-content: start;
+  /* Gleichmäßige Verteilung der Listenelemente */
+}
+
+li {
+  /* Entfernt den rechten Rand des letzten Listenelements */
+  margin-right: 20px;
+}
+
+/* Styling für die Links */
+NavLink {
+  font-weight: bold;
+  /* Fetter Text */
+  font-size: 16px;
+  /* Schriftgröße */
+  transition: color 0.3s;
+  /* Übergangseffekt für die Schriftfarbe */
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* Styling für aktiven Link */
+.active {
+  color: #e8e88d;
+  /* Farbe für den aktiven Link */
+}
+
+/* Styling für schwebenden Link (pending) */
+.pending {
+  color: gray;
+  /* Farbe für den schwebenden Link */
+}
+
