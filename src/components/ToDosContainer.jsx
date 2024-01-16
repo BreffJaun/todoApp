@@ -10,7 +10,7 @@ import ToDoItem from "./ToDoItem.jsx";
 
 // C O D E
 const ToDosContainer = () => {
-  const [tasks, , , addTask] = useContext(ToDoContext);
+  const [tasks, setTasks, , addTask] = useContext(ToDoContext);
   const [newTask, setNewTask] = useState("");
   const toDos = tasks.filter((el) => !el.done);
 
@@ -20,7 +20,7 @@ const ToDosContainer = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addTask(newTask);
+    addTask(newTask, tasks, setTasks);
     setNewTask("");
   };
 

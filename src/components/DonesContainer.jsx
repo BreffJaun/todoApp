@@ -11,7 +11,7 @@ import DoneItem from "./DoneItem.jsx";
 // C O D E
 
 const DonesContainer = () => {
-  const [tasks, , , , removeTask] = useContext(ToDoContext);
+  const [tasks, , , ,] = useContext(ToDoContext);
   const doneTasks = tasks.filter((el) => el.done);
 
   return (

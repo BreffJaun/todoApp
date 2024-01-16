@@ -10,15 +10,21 @@ import ToDoContext from "../context/ToDoContext.jsx";
 // C O D E
 
 const DoneItem = ({ task }) => {
-  const [, , updateTask, , removeTask] = useContext(ToDoContext);
+  const [tasks, setTasks, updateTask, , removeTask] = useContext(ToDoContext);
   return (
     <div className="todones-item">
       <p>{task.text}</p>
       <div className="todone-innerItem">
-        <button className="btn" onClick={() => updateTask(task.id)}>
+        <button
+          className="btn"
+          onClick={() => updateTask(task.id, tasks, setTasks)}
+        >
           &#8635;
         </button>
-        <button className="btn trash-icon" onClick={() => removeTask(task.id)}>
+        <button
+          className="btn trash-icon"
+          onClick={() => removeTask(task.id, tasks, setTasks)}
+        >
           &#128465;
         </button>
       </div>
