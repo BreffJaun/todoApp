@@ -27,3 +27,10 @@ $btnBg: #184b43;
     }
   }
 }
+
+@media (max-width: 767px) {
+  .todones-item {
+    width: 100%;
+  }
+}
+

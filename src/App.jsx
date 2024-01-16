@@ -12,8 +12,9 @@ import {
   updateTask,
   addTask,
   removeTask,
+  toggleEditing,
+  editTask,
 } from "./components/todoFunctions.jsx";
-// import Login from "./components/Login.jsx";
 import Navigation from "./components/Navigation.jsx";
 import DonesContainer from "./components/DonesContainer.jsx";
 import ToDosContainer from "./components/ToDosContainer.jsx";
@@ -24,7 +25,15 @@ function App() {
   const [tasks, setTasks] = useState([]);
   return (
     <ToDoContext.Provider
-      value={[tasks, setTasks, updateTask, addTask, removeTask]}
+      value={[
+        tasks,
+        setTasks,
+        updateTask,
+        addTask,
+        removeTask,
+        toggleEditing,
+        editTask,
+      ]}
     >
       <div className="App">
         <Navigation />
@@ -40,15 +49,3 @@ function App() {
 }
 
 export default App;
-
-// I M P O R T:   F I L E S
-
-// I M P O R T:   P A C K A G E S
-
-// I M P O R T:   F U N C T I O N S
-
-// C O D E
-
-{
-  /* <Route path="" element={}/> */
-}

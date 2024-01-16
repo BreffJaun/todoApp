@@ -53,3 +53,17 @@ a {
   /* Farbe für den schwebenden Link */
 }
 
+@media (max-width: 767px) {
+  nav {
+    padding: 5px;
+  }
+
+  li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  NavLink {
+    font-size: 1.2em;
+  }
+}

@@ -10,7 +10,7 @@ import ToDoItem from "./ToDoItem.jsx";
 
 // C O D E
 const ToDosContainer = () => {
-  const [tasks, setTasks, , addTask] = useContext(ToDoContext);
+  const [tasks, setTasks, , addTask, ,] = useContext(ToDoContext);
   const [newTask, setNewTask] = useState("");
   const toDos = tasks.filter((el) => !el.done);
 

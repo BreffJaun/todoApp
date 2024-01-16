@@ -17,21 +17,11 @@ main {
   padding-bottom: 1rem;
 }
 
-/* SPINNER BEHAVIOUR */
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 767px) {
+  main {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.spinner-image {
-  animation: rotate 3s linear infinite;
-  width: 100%;
-  height: auto;
 }
 
 .btn {
@@ -53,9 +43,19 @@ main {
   &:hover {
     opacity: 0.9;
   }
+
+  @media (max-width: 767px) {
+    width: 50px;
+    font-size: 1em;
+  }
 }
 
 .trash-icon {
   font-size: 1.2em;
   line-height: 1.2;
+
+  @media (max-width: 767px) {
+      font-size: 1em;
+  }
 }
+
