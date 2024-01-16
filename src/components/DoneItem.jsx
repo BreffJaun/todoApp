@@ -2,7 +2,7 @@
 
 // I M P O R T:   P A C K A G E S
 import PropTypes from "prop-types";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import ToDoContext from "../context/ToDoContext.jsx";
 
 // I M P O R T:   F U N C T I O N S
@@ -11,8 +11,21 @@ import ToDoContext from "../context/ToDoContext.jsx";
 
 const DoneItem = ({ task }) => {
   const [tasks, setTasks, updateTask, , removeTask] = useContext(ToDoContext);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
   return (
-    <div className="todones-item">
+    <div
+      className={`todones-item ${isHovered ? "hovered" : ""}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <p>{task.text}</p>
       <div className="todone-innerItem">
         <button
@@ -28,6 +41,7 @@ const DoneItem = ({ task }) => {
           &#128465;
         </button>
       </div>
+      {isHovered && <div className="tooltip">{task.text}</div>}
     </div>
   );
 };

@@ -37,7 +37,6 @@ const ToDoItem = ({ task }) => {
     const updatedTasks = await editTask(task.id, newText, tasks);
     const updatedTasksEditing = await toggleEditing(task.id, updatedTasks);
     setTasks(updatedTasksEditing);
-    setNewText(task.text);
   };
 
   return (
